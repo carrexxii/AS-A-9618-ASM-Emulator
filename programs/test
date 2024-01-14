@@ -1,0 +1,24 @@
+;; mem_range 100 101
+;; mem_range 110 112
+;; mem_value 110 66
+;; mem_value 111 65
+;; mem_value 112 35
+;; addr_start 77
+
+LDR #0
+LDX 110
+CMP #35
+JPE 92
+ADD 100
+STO 101
+LDM #1
+ADD 100
+STO 100
+INC IX
+LDX 110
+CMP #35
+JPN 81
+LDD 100
+ADD #48
+OUT
+END
